@@ -1,9 +1,9 @@
-for a in range(1000, 1, -1):
-    flag = True
-    for x in range(1000):
-        if not((x%a == 0) or ((70<=x<=90)<=(not(x%22 == 0)))):
-            flag = False
-    if flag:
-        print(a)
+
+for amax in range(201):
+    sh = 0
+    for x in range(200):
+        if not( ((x<5 or x>54) and (x>50 and x<= 93)) <= (x>amax)):
+            sh +=1
+    if sh == 20:
+        print(amax)
         break
-            

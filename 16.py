@@ -1,12 +1,7 @@
-import sys
-
-sys.setrecursionlimit(9999999)
-def F(n):
-    if n == 1:
-        return 1
-    if n > 1:
-        return 2 * n * F(n - 1)
-
-
-
-print((F(2024) // 16 - F(2023)) // F(2022))
+for i in range(1, 100000000000000000):
+    s = 0
+    for k in range(1, i + 1):
+        if i % k == 0:
+            s = s + 1
+    if s <= 2:
+        print(i)

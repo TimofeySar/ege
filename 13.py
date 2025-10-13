@@ -1,7 +1,4 @@
-print(bin(90))
-print(bin(162))
-print(int('1010100010', 2))
-# 01011100
-# 01010000
-# 11111111111
-print(2**11)
+a = str(input())
+a = a.split('. ')
+b = a[1].split(' ')
+print(b[1])
