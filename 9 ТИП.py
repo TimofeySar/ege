@@ -54,12 +54,15 @@
 #             print(k)
 
 
-sp = [list(map(int, i.split())) for i in open("09.txt")]
-k = 0
-# print(sp)
-for i in sp:
-    spsort = sorted(i)
-    if (spsort[3] + spsort[4]) * 2 > 3 * sum(spsort[0:3]):
-        if len([u for u in i if u % 10 == 5]) >= 2:
-            k += 1
-print(k)
+# sp = [list(map(int, i.split())) for i in open("09.txt")]
+# k = 0
+# # print(sp)
+# for i in sp:
+#     spsort = sorted(i)
+#     if (spsort[3] + spsort[4]) * 2 > 3 * sum(spsort[0:3]):
+#         if len([u for u in i if u % 10 == 5]) >= 2:
+#             k += 1
+#
+# print(k)
+
+
