@@ -16,7 +16,6 @@ for i in range(1125000, 400000000000):
             if m[j] %10 == 7 and m[j] != 7 and m[j] != i:
                 mas.append([i, m[j]])
                 break
-
     else:
         break
 print(mas)
