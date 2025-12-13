@@ -19,4 +19,12 @@
 
 from functools import lru_cache
 @lru_cache(None)
-def f(x,y,z):
+def f(n, m):
+    if n < m or n == 22:
+        return 0
+    elif n == m:
+        return 1
+
+    return f(n-2, m) + f(n//2, m) + f(n//3, m)
+
+print(f(40,2) )

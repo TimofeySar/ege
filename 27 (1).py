@@ -27,8 +27,8 @@ print(((cl1[15][0] + cl2[34][0])/2)*10000, ((cl1[15][1] + cl2[34][1])/2)*10000)
 
 f = open('27_B_21720.txt').readlines()
 for i in range(len(a)):
-    for j in range(len(b))
-        sorted(m)[0] == 
+    for j in range(len(b)):
+        sorted(m)[0] == '3'
 
 
 print('hello worrld for i in range(')

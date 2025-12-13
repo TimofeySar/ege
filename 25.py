@@ -12,9 +12,7 @@ def dell(n):
     m = []
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
-
             m.append(i)
-
             m.append(n//i)
     return sorted(list(set(m)))
 
