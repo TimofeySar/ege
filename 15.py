@@ -1,19 +1,18 @@
-#
-# for amax in range(201):
-#     sh = 0
-#     for x in range(200):
-#         if not( ((x<5 or x>54) and (x>50 and x<= 93)) <= (x>amax)):
-#             sh +=1
-#     if sh == 20:
-#         print(amax)
-#         break
+def check(A):
+    # Проверяем значения m и n в разумном диапазоне
+    for m in range(100):
+        for n in range(100):
+            # Само логическое выражение из условия
+            f = (2 * m + 3 * n > 40) or ((m < A) and (n <= A))
+
+            # Если хотя бы раз выражение ложно, это А нам не подходит
+            if not f:
+                return False
+    return True
 
 
-for a in range(1,1000):
-    f = True
-    for x in range(1,1000):
-        for y in range(1,1000):
-           if ((y > a) or (152 != 2 * y + 3 * x) or (a < x)) == 0:
-                 f = False
-    if f == True:
-        print(a)
+# Перебираем А и выводим первое подошедшее
+for A in range(100):
+    if check(A):
+        print(A)
+        break
