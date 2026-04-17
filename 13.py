@@ -1,7 +1,7 @@
-print(bin(90))
-print(bin(162))
-print(int('1010100010', 2))
-# 01011100
-# 01010000
-# 11111111111
-print(2**11)
+for A in range(1, 1000):
+    for x in '0123456789ABCD':
+        M = int('8' + x + '12' + x, 14)
+        N = int('8' + x + '542', 14)
+        if (M + A) % N == 0:
+            print(A)
+            exit()

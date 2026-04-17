@@ -1,0 +1,26 @@
+# # def f(k, m):
+# #     if k <= 14:
+# #         return m%2 ==0
+# #     if m == 0:
+# #         return 0
+# #     h = [f(k-4, m-1), f(k-7, m - 1), f(int(k/2), m-1)]
+# #     if m%2 != 0:
+# #         return any(h)
+# #     return all(h)
+# #
+# #
+# #
+# # print([s for s in range(15, 100) if f(s, 2) ])
+#
+#
+
+def f(s, m):
+    if s <= 15:
+        return m%2 == 0
+    elif m ==0:
+        return 0
+    h = [f(s - 3, m-1), f(s - 8, m-1), f(int(s/3), m-1)]
+
+    return any(h) if (m-1)%2 == 0 else all(h)
+print([s for s in  range(16, 100) if not(f(s,1))  and not(f(s,2)) and f(s, 3)])
+print([s for s in  range(16, 100) if not(f(s,2)) and f(s, 4)])

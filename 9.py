@@ -1,13 +1,20 @@
-f = open('9.txt').readlines()
-a = [list(map(int, f[i].split())) for i in range(len(f))]
-sh = 0
-for i in range(len(a)):
-    q = set(a[i])
-    if len(q) == 4 and(a[i].count(a[i][1]) == 3 or a[i].count(a[i][0]) == 3 or \
-            a[i].count(a[i][2]) == 3 or a[i].count(a[i][3]) == 3 or\
-            a[i].count(a[i][4]) == 3 or a[i].count(a[i][5]) == 3 ):
-        w = sum(a[i])
-        e = sum(list(q))
-        if (((w - e)//2) *3) ** 2 > (e - (w - e)//2) **2:
-            sh += 1
-print(sh)
+
+f = open('9.txt')
+cnt = 0
+for s in f:
+    a = list(map(int, s.split()))
+    if len(set(a)) == 5:
+        flag = 1
+        sr1 = 0
+        for i in range (0,len(a)):
+            if a.count(a[i]) == 2:
+                sr1 += a[i]
+            if a.count(a[i]) > 2:
+                flag = 0
+                break
+        if flag == 1:
+            sr2 = (sum(a)-sr1)/3
+            sr1 = sr1/4
+            if sr2 < sr1:
+                cnt += 1
+print(cnt)
